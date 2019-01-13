@@ -21,3 +21,9 @@ C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\B
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\BackupManager.csproj.CopyComplete
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\BackupManager.exe
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\BackupManager.pdb
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\MaterialDesignColors.dll
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\BackupManager.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\App.baml

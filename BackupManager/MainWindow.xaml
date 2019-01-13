@@ -5,33 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BackupManager"
         mc:Ignorable="d"
-        Title="BackupManager 2019 | TheRealVira" Height="450" Width="800" ResizeMode="CanMinimize">
-    <Grid Background="#FF443636">
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="128" Margin="10,10,0,0" Background="#FF443636">
-            <Border.Effect>
-                <DropShadowEffect/>
-            </Border.Effect>
-            <Label Content="Backup Manager 2019" Margin="-1" Foreground="White"/>
-        </Border>
-        <TextBox Name="Txtbx_SelectedDirectories" Text="{Binding SelectedDirectories, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="411" Margin="10,80,0,10" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible" TextWrapping="NoWrap" AcceptsReturn="True"/>
+        Title="BackupManager 2019 | TheRealVira" Height="450" Width="800" ResizeMode="CanMinimize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <materialDesign:Card HorizontalAlignment="Left" Padding="3" Height="30" VerticalAlignment="Top" Width="241" Margin="10,10,0,0">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">Backup Manager 2019</TextBlock>
+        </materialDesign:Card>
 
-        <Label Content="Selected Directories:" Margin="10,53,0,0" Foreground="White" HorizontalAlignment="Left" Width="117" Height="27" VerticalAlignment="Top"/>
-        <Button Content="Search for a directory 🔎" HorizontalAlignment="Left" Margin="256,52,0,0" VerticalAlignment="Top" Width="165" Click="Button_Click" Background="#FF9ECFDA"/>
-        <Button ToolTip="Exports the currently saved list of directories.." Content="Export ⤵️" HorizontalAlignment="Left" Margin="197,52,0,0" VerticalAlignment="Top" Width="54" Click="Button_Click_1" Background="#FF7E8FBB"/>
-        <Button ToolTip="Loads an already exported list of directories.." Content="Load ⤴" HorizontalAlignment="Left" Margin="138,52,0,0" VerticalAlignment="Top" Width="54" Click="Button_Click_2" Background="#FFB183D1"/>
+        <TextBox Name="Txtbx_SelectedDirectories" Style="{x:Null}" Text="{Binding SelectedDirectories, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="411" Margin="10,89,0,10" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible" TextWrapping="NoWrap" AcceptsReturn="True"/>
+
+        <Label Content="Selected Directories:" Margin="10,58,0,0" Foreground="White" HorizontalAlignment="Left" Width="133" Height="27" VerticalAlignment="Top"/>
+        <Button ToolTip="Search for a directory." HorizontalAlignment="Left" Margin="351,52,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Background="#FF9ECFDA">
+            <materialDesign:PackIcon Kind="FolderSearch"/>
+        </Button>
+        <Button ToolTip="Exports the currently saved list of directories.." HorizontalAlignment="Left" Margin="292,52,0,0" VerticalAlignment="Top" Width="54" Click="Button_Click_1" Background="#FF7E8FBB">
+            <materialDesign:PackIcon Kind="FileExport" />
+        </Button>
+        <Button ToolTip="Loads an already exported list of directories.." HorizontalAlignment="Left" Margin="233,52,0,0" VerticalAlignment="Top" Width="54" Click="Button_Click_2" Background="#FFB183D1">
+            <materialDesign:PackIcon Kind="FileFind"></materialDesign:PackIcon>
+        </Button>
         <Label Content="Output Directory:" Margin="445,52,0,0" Foreground="White" HorizontalAlignment="Left" Width="117" Height="27" VerticalAlignment="Top"/>
-        <TextBox TextChanged="TextBoxBase_OnTextChanged" ToolTip="Preferably you might to select a directory on a different disk!" Text="{Binding OutputDirectory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="489,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
-        <Button ToolTip="Search for a directory.." Content="🔎" HorizontalAlignment="Left" Margin="445,84,0,0" VerticalAlignment="Top" Width="39" Click="Button_Click_3" Background="#FF9ECFDA"/>
+        <TextBox materialDesign:HintAssist.Hint="Path where backup should get saved in." TextChanged="TextBoxBase_OnTextChanged" ToolTip="Preferably you might to select a directory on a different disk!" Text="{Binding OutputDirectory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="32" Margin="516,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
+        <Button ToolTip="Search for a directory.." HorizontalAlignment="Left" Margin="445,75,0,0" VerticalAlignment="Top" Width="66" Click="Button_Click_3" Background="#FF9ECFDA">
+            <materialDesign:PackIcon Kind="FolderSearch"></materialDesign:PackIcon>
+        </Button>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="87" Margin="445,112,0,0" VerticalAlignment="Top" Width="326"/>
         <Label Content="Properties" Foreground="White" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top" FontStyle="Italic" Margin="445,112,0,0"/>
         <CheckBox Name="Chckbx_DateAsName" IsChecked="true" Content="Use todays date as backup name" HorizontalAlignment="Left" Margin="457,144,0,0" VerticalAlignment="Top" Foreground="Red"/>
         <CheckBox Name="Chckbx_Compress" IsChecked="true" Content="Compress backup" HorizontalAlignment="Left" Margin="457,165,0,0" VerticalAlignment="Top" Foreground="Red"/>
-        <Button IsEnabled="False" Visibility="Visible" ToolTip="You first have to select an output directory before backing up your data.." Content="⚙️ Backup data ⚙️" HorizontalAlignment="Left" Margin="445,204,0,0" VerticalAlignment="Top" Width="146" Height="40" Background="#FFD3DAA8">
+        <Button Name="btn_blurredNdisabled" IsEnabled="False" Visibility="Visible" ToolTip="You first have to select an output directory before backing up your data.." Content="⚙️ Backup data ⚙️" HorizontalAlignment="Left" Margin="445,204,0,0" VerticalAlignment="Top" Width="326" Height="40" Background="{x:Null}">
             <Button.Effect>
                 <BlurEffect/>
             </Button.Effect>
         </Button>
-        <Button Name="Btn_Backup" Visibility="Hidden" ToolTip="Backup data!" Content="⚙️ Backup data ⚙️" HorizontalAlignment="Left" Margin="445,204,0,0" VerticalAlignment="Top" Width="146" Height="40" Background="#FFD3DAA8" Click="Btn_Backup_Click"/>
+        <Button Style="{StaticResource MaterialDesignFlatButton}" Name="Btn_Backup" Visibility="Hidden" ToolTip="Backup data!" Content="⚙️ Backup data ⚙️" HorizontalAlignment="Left" Margin="445,204,0,0" VerticalAlignment="Top" Width="326" Height="40" Background="{x:Null}" Click="Btn_Backup_Click"/>
         <TextBox Visibility="Hidden" Name="Txtbx_Progress" HorizontalAlignment="Left" Height="162" Margin="445,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326"/>
+        <Image Source="backupManager2019.ico" HorizontalAlignment="Left" Height="30" Width="30" Margin="221,10,0,0" VerticalAlignment="Top" />
     </Grid>
 </Window>

@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BackupManager"
         mc:Ignorable="d"
-        Title="EnterNameDialog" Height="124.086" Width="336.545" WindowStyle="ToolWindow" ResizeMode="NoResize">
-    <StackPanel>
-        <TextBlock Text="Enter a name for your backup.." />
-        <TextBox x:Name="ResponseTextBox" TextChanged="ResponseTextBox_TextChanged" />
-        <Button Name="btn_ok" Visibility="Hidden" Content="OK" Click="OKButton_Click" />
-        <Button Content="Cancel" Click="CancelButton_Click" />
+        Title="EnterNameDialog" Height="186.086" Width="290.545" WindowStyle="ToolWindow" ResizeMode="NoResize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <StackPanel Margin="5">
+        <TextBlock Margin="5" Text="Enter a name for your backup.." />
+        <TextBox Margin="5" x:Name="ResponseTextBox" TextChanged="ResponseTextBox_TextChanged" materialDesign:HintAssist.Hint="Name of backup"/>
+        <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="5" Name="btn_ok" Visibility="Hidden" Content="OK" Click="OKButton_Click" />
+        <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="5" Content="CANCEL" Click="CancelButton_Click"/>
     </StackPanel>
 </Window>

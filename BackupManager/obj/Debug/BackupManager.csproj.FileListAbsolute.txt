@@ -22,3 +22,8 @@ C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Debug\Ent
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Debug\EnterNameDialog.baml
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Debug\DotNetZip.dll
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Debug\DotNetZip.xml
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Debug\MaterialDesignColors.dll
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Debug\App.baml

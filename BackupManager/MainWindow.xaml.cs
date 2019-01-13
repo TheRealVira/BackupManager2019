@@ -106,6 +106,9 @@ namespace BackupManager
         private void TextBoxBase_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             Btn_Backup.Visibility = Manager.OutputDirectory.Equals(string.Empty)?Visibility.Hidden:Visibility.Visible;
+            btn_blurredNdisabled.Visibility = Btn_Backup.Visibility.Equals(Visibility.Hidden)
+                ? Visibility.Visible
+                : Visibility.Hidden;
         }
 
         private void Btn_Backup_Click(object sender, RoutedEventArgs e)
