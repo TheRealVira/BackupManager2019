@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using BackupManager.Annotations;
 using Ionic.Zip;
+using Ionic.Zlib;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace BackupManager
@@ -33,12 +31,12 @@ namespace BackupManager
         {
             var dialog = new CommonOpenFileDialog
             {
-                InitialDirectory = "C:\\Users", IsFolderPicker = true
+                InitialDirectory = "C:\\Users", IsFolderPicker = true, Multiselect = true
             };
 
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                Manager.SelectedDirectories += Environment.NewLine + dialog.FileName;
+                Manager.SelectedDirectories += string.Join(Environment.NewLine, dialog.FileNames)+Environment.NewLine;
             }
         }
 
@@ -206,6 +204,9 @@ namespace BackupManager
         {
             using (var zip = new ZipFile())
             {
+                zip.CompressionLevel = CompressionLevel.BestCompression;
+                zip.UseZip64WhenSaving = Zip64Option.Always;
+
                 foreach (var sourceDirectory in Manager.SelectedDirectories.Split(
                     new[] {Environment.NewLine},
                     StringSplitOptions.None))

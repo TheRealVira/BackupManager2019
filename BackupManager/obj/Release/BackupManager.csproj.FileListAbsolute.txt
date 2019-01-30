@@ -27,3 +27,7 @@ C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\M
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\MaterialDesignThemes.Wpf.xml
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\BackupManager.csprojAssemblyReference.cache
 C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\App.baml
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\BackupManager.exe.manifest
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\bin\Release\BackupManager.application
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\BackupManager.exe.manifest
+C:\Users\Administrator\Desktop\POS_NVS\BackupManager\BackupManager\obj\Release\BackupManager.application
