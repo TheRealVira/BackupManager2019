@@ -120,7 +120,7 @@ namespace BackupManager
         {
             try
             {
-                var backupName = (DateTime.Now.ToLongDateString() + ":" + DateTime.Now.ToShortTimeString())
+                var backupName = (DateTime.Now.ToString("yyyy-MM-dd") + ":" + DateTime.Now.ToShortTimeString())
                     .Replace(':', '_').Replace(' ', '_');
 
                 var chckbxDataAsNameValue = false;

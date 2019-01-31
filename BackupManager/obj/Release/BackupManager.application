@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xrml="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <assemblyIdentity name="BackupManager.application" version="1.0.1.1" publicKeyToken="0000000000000000" language="en-GB" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <assemblyIdentity name="BackupManager.application" version="1.0.1.2" publicKeyToken="0000000000000000" language="en-GB" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="Johanna Rührig aka TheRealVira" asmv2:product="BackupManager2019" asmv2:supportUrl="https://github.com/TheRealVira/BackupManager2019" co.v1:errorReportUrl="https://github.com/TheRealVira/BackupManager2019" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
@@ -8,13 +8,13 @@
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="BackupManager.exe.manifest" size="7419">
-      <assemblyIdentity name="BackupManager.exe" version="1.0.1.1" publicKeyToken="0000000000000000" language="en-GB" processorArchitecture="msil" type="win32" />
+      <assemblyIdentity name="BackupManager.exe" version="1.0.1.2" publicKeyToken="0000000000000000" language="en-GB" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Nh6tf8RJZKOj5ethRzOMCIY02taQL1fPge0FRdWTLtc=</dsig:DigestValue>
+        <dsig:DigestValue>ZN4cA27FJ0qfjlp1BX2Y6Y7wejseTkuPUCIQYSYC91E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
